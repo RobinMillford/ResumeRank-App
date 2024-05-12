@@ -1,0 +1,11 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+env/
+venv/
+myenv/
+.idea/
+
+# Streamlit
+*.pyi
