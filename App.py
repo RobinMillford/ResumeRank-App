@@ -48,7 +48,7 @@ def main():
             top_matches = calculate_similarity(job_description, df)
             if not top_matches.empty:
                 st.subheader("Top 10 Matches 🚀")
-                st.table(top_matches)
+                st.write(top_matches)
             else:
                 st.write("Please ensure the CSV file contains 'ID' and 'Resume_str' columns.")
 
