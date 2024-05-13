@@ -1,11 +1,18 @@
 # Python
 *.pyc
-*.pyo
 __pycache__/
-env/
+.pytest_cache/
+
+# Virtual Environment
 venv/
+env/
+.venv/
 myenv/
-.idea/
 
 # Streamlit
-*.pyi
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# Miscellaneous
+.DS_Store
+.vscode/
