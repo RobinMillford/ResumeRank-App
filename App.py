@@ -35,20 +35,20 @@ def calculate_similarity(job_description, df):
 
 # Streamlit app
 def main():
-    st.title("Resume Matching App")
+    st.title("📄 Resume Matching App 🎯")
 
     uploaded_file = st.file_uploader("Upload resume data (CSV)", type="csv")
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         st.write(df.head())
 
-        job_description = st.text_area("Enter job description")
+        job_description = st.text_area("Enter job description 📝")
 
-        if st.button("Match Resumes"):
+        if st.button("Match Resumes 🔍"):
             top_matches = calculate_similarity(job_description, df)
             if not top_matches.empty:
-                st.subheader("Top 10 Matches")
-                st.write(top_matches)
+                st.subheader("Top 10 Matches 🚀")
+                st.table(top_matches)
             else:
                 st.write("Please ensure the CSV file contains 'ID' and 'Resume_str' columns.")
 
